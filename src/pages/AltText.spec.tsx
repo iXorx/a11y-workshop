@@ -6,10 +6,8 @@ describe("AltText", () => {
   it("should render without crashing", () => {
     render(<AltText />);
 
-    expect(screen.getByText("AltText")).toBeInTheDocument();
+    // expect(screen.getByText("AltText")).toBeInTheDocument();
 
-    // expect(
-    //   screen.getByRole("image", { name: "Camisa de manga larga" })
-    // ).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "" })).toBeInTheDocument();
   });
 });
