@@ -14,7 +14,7 @@ describe("Contrast", () => {
     const computed = getComputedStyle(target);
 
     let parentTarget = target.parentElement;
-    let bgColor;
+    let bgColor = "#000";
     while (parentTarget) {
       bgColor =
         getComputedStyle(parentTarget).getPropertyValue("background-color");
