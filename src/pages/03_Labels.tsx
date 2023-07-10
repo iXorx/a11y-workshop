@@ -55,7 +55,7 @@ export const Labels = () => {
           <input
             style={inputStyle}
             type="search"
-            aria-aria-labelledby="search"
+            aria-labelledby="search"
             placeholder="Buscar"
             autoComplete="search"
           />
