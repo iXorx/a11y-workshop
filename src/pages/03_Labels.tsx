@@ -1,18 +1,40 @@
+const inputStyle = {
+  display: "block",
+  margin: "0.25rem",
+  padding: "0.5rem",
+  fontSize: "1rem",
+  maxWidth: "25rem",
+  width: "100%",
+};
+
 export const Labels = () => {
   return (
     <div>
-      <h2>Labels</h2>
-      <p>Labels page content</p>
-
+      <h2>Ausencia de Labels</h2>
       <form>
         <div>
           <label htmlFor="name">
             Nombre
-            <input type="text" id="name" autoComplete="name" />
+            <input
+              style={inputStyle}
+              type="text"
+              id="name"
+              autoComplete="name"
+            />
           </label>
         </div>
         <div>
+          <label htmlFor="surname">Apellidos</label>
           <input
+            style={inputStyle}
+            type="text"
+            id="surname"
+            autoComplete="surname"
+          />
+        </div>
+        <div>
+          <input
+            style={inputStyle}
             placeholder="Domicilio"
             autoComplete="address-line1"
             type="text"
@@ -21,11 +43,8 @@ export const Labels = () => {
           ></input>
         </div>
         <div>
-          <label htmlFor="surname">Apellidos</label>
-          <input type="text" id="surname" autoComplete="surname" />
-        </div>
-        <div>
           <input
+            style={inputStyle}
             type="tel"
             aria-label="Teléfono"
             placeholder="Teléfono"
@@ -34,6 +53,7 @@ export const Labels = () => {
         </div>
         <div>
           <input
+            style={inputStyle}
             type="search"
             aria-aria-labelledby="search"
             placeholder="Buscar"
@@ -44,7 +64,7 @@ export const Labels = () => {
           </button>
         </div>
 
-        <input type="submit" value="Enviar" />
+        <input style={inputStyle} type="submit" value="Enviar" />
       </form>
 
       <aside lang="en">

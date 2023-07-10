@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe } from "vitest";
 import ColorContrastChecker from "color-contrast-checker";
+import { Contrast } from ".";
 
 describe("Contrast", () => {
   it("should check contrast", () => {
@@ -24,10 +25,20 @@ describe("Contrast", () => {
       parentTarget = parentTarget.parentElement;
     }
     const textColor = computed.getPropertyValue("color");
-    // expect(textColor).toBe("#444");
-    // expect(bgColor).toBe("#333");
-
     const ccc = new ColorContrastChecker();
     expect(ccc.isLevelAA(textColor, bgColor, 14)).toBe(true);
+  });
+
+  it("should check a11y contrast", () => {
+    render(<Contrast />);
+
+    const target = screen.getByText(/I am red text/);
+    const computed = getComputedStyle(target);
+    const textColor = computed.getPropertyValue("color");
+    const bgColor = computed.getPropertyValue("background-color");
+    const fontSize = parseInt(computed.getPropertyValue("font-size"));
+
+    const ccc = new ColorContrastChecker();
+    expect(ccc.isLevelAA(textColor, bgColor, fontSize)).toBe(true);
   });
 });

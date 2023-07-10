@@ -59,11 +59,15 @@ export const Contrast = () => {
         contraste más bajo.
       </p>
       <h3>Texto grande</h3>
+      <p style={{ fontSize: "4rem" }}> 18pt o más grande</p>
+      <p style={{ fontSize: "1rem", fontWeight: 800 }}>
+        14pt o más grande si es negrita.
+      </p>
       <p>
-        <div style={{ fontSize: "4rem" }}> 18pt o más grande</div>
-        <div style={{ fontSize: "1rem", fontWeight: 800 }}>
-          14pt o más grande si es negrita.
-        </div>
+        NOTA: En las páginas web, los píxeles son mucho más comunes para el
+        tamaño del texto que los puntos. 18 puntos se mapea a 24 píxeles y 14
+        puntos a aproximadamente 18,67 píxeles. En CSS, el texto en negrita
+        normalmente tiene font-weight:bold, o font-weight:700 o mayor.
       </p>
       <aside lang="en">
         <h3>Aside</h3>
@@ -79,7 +83,13 @@ export const Contrast = () => {
         <ul>
           <li>
             Pure red (#FF0000) has a ratio of 4:1.{" "}
-            <span style={{ color: "#ff0000", backgroundColor: "#fff" }}>
+            <span
+              style={{
+                color: "#ff0000",
+                backgroundColor: "#fff",
+                fontSize: "2rem",
+              }}
+            >
               I am red text.
             </span>
           </li>
@@ -88,7 +98,7 @@ export const Contrast = () => {
             Pure green (#00FF00) has a very low ratio of 1.4:1.{" "}
             <span style={{ color: "#00FF00", backgroundColor: "#fff" }}>
               I am green text.
-            </span>{" "}
+            </span>
           </li>
           <li>
             Pure blue (#000FF) has a contrast ratio of 8.6:1.
@@ -98,6 +108,12 @@ export const Contrast = () => {
             .
           </li>
         </ul>
+        <p>
+          AA: It requires 3:1 contrast for normal text and 4.5:1 for large text
+        </p>
+        <p>
+          AAA: It requires 4.5:1 contrast for normal text and 7:1 for large text
+        </p>
       </aside>
     </div>
   );

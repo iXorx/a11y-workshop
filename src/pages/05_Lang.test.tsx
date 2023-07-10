@@ -6,9 +6,8 @@ describe("Lang", () => {
   it("should check a11y features", () => {
     render(<Lang />);
 
-    // screen.debug();
-
-    let topParent = screen.getByText("Lang page content");
+    // let topParent = screen.getByText("Lang page content");
+    let topParent = screen.getByRole("heading", { name: "Languages" });
     while (topParent.parentElement) {
       if (topParent.getAttribute("lang")) {
         break;
