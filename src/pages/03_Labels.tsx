@@ -56,7 +56,7 @@ export const Labels = () => {
             style={inputStyle}
             type="search"
             aria-labelledby="search"
-            placeholder="Buscar"
+            placeholder="Busca la población mas cercana"
             autoComplete="search"
           />
           <button type="button" id="search">
