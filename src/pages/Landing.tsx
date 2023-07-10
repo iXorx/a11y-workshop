@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export const Landing = () => {
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Live coding</h1>
       <p className="read-the-docs">
         <a href="https://webaim.org/projects/million/#wcag">WebAim</a>
       </p>
@@ -23,7 +25,9 @@ export const Landing = () => {
               <th>% of home pages in 2019</th>
             </tr>
             <tr>
-              <td>Low contrast text</td>
+              <td>
+                <Link to="/contrast">Low contrast text</Link>
+              </td>
               <td>83.6%</td>
               <td>83.9%</td>
               <td>86.4%</td>
@@ -31,7 +35,9 @@ export const Landing = () => {
               <td>85.3%</td>
             </tr>
             <tr>
-              <td>Missing alternative text for images</td>
+              <td>
+                <Link to="alt">Missing alternative text for images</Link>
+              </td>
               <td>58.2%</td>
               <td>55.4%</td>
               <td>60.6%</td>
@@ -39,7 +45,9 @@ export const Landing = () => {
               <td>68.0%</td>
             </tr>
             <tr>
-              <td>Empty links</td>
+              <td>
+                <Link to="empty-links">Empty links</Link>
+              </td>
               <td>50.1%</td>
               <td>49.7%</td>
               <td>51.3%</td>
@@ -47,7 +55,9 @@ export const Landing = () => {
               <td>58.1%</td>
             </tr>
             <tr>
-              <td>Missing form input labels</td>
+              <td>
+                <Link to="labels">Missing form input labels</Link>
+              </td>
               <td>45.9%</td>
               <td>46.1%</td>
               <td>54.4%</td>
@@ -55,7 +65,9 @@ export const Landing = () => {
               <td>52.8%</td>
             </tr>
             <tr>
-              <td>Empty buttons</td>
+              <td>
+                <Link to="empty-buttons">Empty buttons</Link>
+              </td>
               <td>27.5%</td>
               <td>27.2%</td>
               <td>26.9%</td>
@@ -63,7 +75,9 @@ export const Landing = () => {
               <td>25.0%</td>
             </tr>
             <tr>
-              <td>Missing document language</td>
+              <td>
+                <Link to="lang">Missing document language</Link>
+              </td>
               <td>18.6%</td>
               <td>22.3%</td>
               <td>28.9%</td>
