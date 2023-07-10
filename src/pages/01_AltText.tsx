@@ -1,7 +1,7 @@
 export const AltText = () => {
   return (
     <div>
-      <h2>AltText</h2>
+      <h2>Texto Alternativo</h2>
       <img
         src="https://images.pexels.com/photos/769749/pexels-photo-769749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt=""

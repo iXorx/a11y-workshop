@@ -1,17 +1,22 @@
+import { Link } from "react-router-dom";
+import "./Step.css";
+
 export function Step({
   isActive,
   isCompleted,
   name,
+  to,
 }: {
   isActive: boolean;
   isCompleted: boolean;
   name: string;
+  to: string;
 }) {
   return (
     <li
-      className={`step ${isCompleted ? "completed" : ""} ${
-        isActive ? "active" : ""
-      }.trim()`}
+      className={`step${isCompleted ? " completed" : ""}${
+        isActive ? " active" : ""
+      }`}
       aria-current={isActive ? "step" : undefined}
     >
       <span className="circle" aria-hidden="true">
@@ -29,7 +34,9 @@ export function Step({
           </svg>
         )}
       </span>
-      <span className="label">{name}</span>
+      <Link to={to} className="label">
+        {name}
+      </Link>
       {!isActive && (
         <span className="sr-only">
           {isCompleted ? ": completado" : ": no completado"}

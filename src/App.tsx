@@ -1,5 +1,4 @@
 import "./App.css";
-import { Nav } from "./components/Nav";
 import { Link, Route, Routes } from "react-router-dom";
 import {
   AltText,
@@ -10,15 +9,16 @@ import {
   Landing,
   Lang,
 } from "./pages";
+import { Steps } from "./components/Steps";
 
 function App() {
   return (
     <>
       <header>
         <Link to="/" className="logo">
-          <h1>Live Coding</h1>
+          <h1 lang="en">Live Coding</h1>
         </Link>
-        <Nav />
+        <Steps />
       </header>
       <main>
         <Routes>

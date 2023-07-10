@@ -7,14 +7,16 @@ export const Landing = () => {
       <p className="read-the-docs">
         <a href="https://webaim.org/projects/million/#wcag">WebAim</a>
       </p>
-      <p>
+      <p lang="en">
         96.3% of home pages had detected WCAG 2 failures! This improved very
         slightly from 96.8% in 2022. Over the last 4 years, the pages with
         detectable WCAG failures has decreased by only 1.5% from 97.8%
       </p>
-      <div className="card">
+      <div className="card" lang="en">
         <table width={700}>
-          <caption>Home pages with most common WCAG 2 failures</caption>
+          <caption>
+            <h4>Home pages with most common WCAG 2 failures</h4>
+          </caption>
           <tbody>
             <tr>
               <th>WCAG Failure Type</th>
