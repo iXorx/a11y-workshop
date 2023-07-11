@@ -50,7 +50,7 @@ export const Contrast = () => {
               backgroundColor: "#FFFF47",
             }}
           >
-            Rojo (#E60000) on amarillo (#FFFF47)
+            Rojo (#E60000) en amarillo (#FFFF47)
           </span>
         </li>
       </ul>
@@ -96,7 +96,7 @@ export const Contrast = () => {
           <li>
             {" "}
             Pure green (#00FF00) has a very low ratio of 1.4:1.{" "}
-            <span style={{ color: "#00FF00", backgroundColor: "#fff" }}>
+            <span style={{ color: "#008900", backgroundColor: "#fff" }}>
               I am green text.
             </span>
           </li>
@@ -109,10 +109,10 @@ export const Contrast = () => {
           </li>
         </ul>
         <p>
-          AA: It requires 3:1 contrast for normal text and 4.5:1 for large text
+          AA: It requires 3:1 contrast for large text and 4.5:1 for normal text
         </p>
         <p>
-          AAA: It requires 4.5:1 contrast for normal text and 7:1 for large text
+          AAA: It requires 4.5:1 contrast for large text and 7:1 for normal text
         </p>
       </aside>
     </div>

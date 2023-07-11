@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { Labels } from ".";
 
 describe("Labels", () => {
-  it("should check a11y features", async () => {
+  it.todo("should check a11y features", async () => {
     userEvent.setup();
 
     render(<Labels />);

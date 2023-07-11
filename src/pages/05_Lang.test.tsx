@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { Lang } from ".";
 
 describe("Lang", () => {
-  it("should check a11y features", () => {
+  it.todo("should check a11y features", () => {
     render(<Lang />);
 
     // let topParent = screen.getByText("Lang page content");

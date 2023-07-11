@@ -32,8 +32,8 @@ export const EmptyLinks = () => {
           </svg>
         </a>
       </div>
-      <a href={condicionChunga > 4 ? undefined : "#"} style={likeAButton}>
-        Yo si tengo contenido
+      <a href={condicionChunga > 1 ? undefined : "#"} style={likeAButton}>
+        Yo si tengo contenido pero a veces pierdo el link
       </a>
       <aside>
         <p>

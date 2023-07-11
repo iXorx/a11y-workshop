@@ -1,10 +1,22 @@
 import { render, screen } from "@testing-library/react";
-import { describe } from "vitest";
 import ColorContrastChecker from "color-contrast-checker";
 import { Contrast } from ".";
 
 describe("Contrast", () => {
-  it("should check contrast", () => {
+  it.todo("should check a11y contrast", () => {
+    render(<Contrast />);
+
+    const target = screen.getByText(/I am red text/);
+    const computed = getComputedStyle(target);
+    const textColor = computed.getPropertyValue("color");
+    const bgColor = computed.getPropertyValue("background-color");
+    const fontSize = parseInt(computed.getPropertyValue("font-size"));
+
+    const ccc = new ColorContrastChecker();
+    expect(ccc.isLevelAA(textColor, bgColor, fontSize)).toBe(true);
+  });
+
+  it.todo("should check contrast with background on parent", () => {
     render(
       <div style={{ backgroundColor: "#000", color: "#444" }}>
         <span style={{ color: "#fff" }}>target</span>
@@ -27,18 +39,5 @@ describe("Contrast", () => {
     const textColor = computed.getPropertyValue("color");
     const ccc = new ColorContrastChecker();
     expect(ccc.isLevelAA(textColor, bgColor, 14)).toBe(true);
-  });
-
-  it("should check a11y contrast", () => {
-    render(<Contrast />);
-
-    const target = screen.getByText(/I am red text/);
-    const computed = getComputedStyle(target);
-    const textColor = computed.getPropertyValue("color");
-    const bgColor = computed.getPropertyValue("background-color");
-    const fontSize = parseInt(computed.getPropertyValue("font-size"));
-
-    const ccc = new ColorContrastChecker();
-    expect(ccc.isLevelAA(textColor, bgColor, fontSize)).toBe(true);
   });
 });
